@@ -1,15 +1,13 @@
-package com.example.cw_5;
+package com.example.cw_3;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-public class Cw5Application {
+public class Cw3Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Cw5Application.class, args);
-		
+		SpringApplication.run(Cw3Application.class, args);
 	}
 
 }

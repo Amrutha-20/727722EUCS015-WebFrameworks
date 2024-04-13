@@ -2,7 +2,7 @@ package com.example.cw_5.controller;
 import com.example.cw_5.model.Student;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
+e
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -24,6 +24,6 @@ public class StudentController {
         obj.setStudentName("John");
         obj.setMessage("Welcome, John!");
         students.add(obj);
-        return obj.getMessage();
+        return obj.getMessage()+" "+obj.getStudentName();
     }
 }

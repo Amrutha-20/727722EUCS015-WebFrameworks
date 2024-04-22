@@ -1,12 +1,12 @@
-package com.example.day7cw1.service;
+package com.example.day8pah.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.day7cw1.model.AmruthaPerson;
-import com.example.day7cw1.repository.AmruthaPersonRepo;
+import com.example.day8pah.model.AmruthaPerson;
+import com.example.day8pah.repository.AmruthaPersonRepo;
 
 @Service
 public class AmruthaPersonService {
@@ -26,14 +26,14 @@ public class AmruthaPersonService {
         }
     }
 
-    public List<AmruthaPerson> getAll()
+    public List<AmruthaPerson> start(String lastname)
     {
-        return rep.findAll();
+        return rep.findByLastnameNot(lastname);
     }
 
-    public List<AmruthaPerson> getbyAge(int age)
+    public List<AmruthaPerson> end(List<Integer> ages)
     {
-        return rep.findByAge(age);
+        return rep.findByAgeNotIn(ages);
     }
     
 }

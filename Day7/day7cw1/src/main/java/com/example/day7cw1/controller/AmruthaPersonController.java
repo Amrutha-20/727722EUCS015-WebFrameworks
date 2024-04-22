@@ -15,10 +15,10 @@ import com.example.day7cw1.service.AmruthaPersonService;
 @RestController
 public class AmruthaPersonController {
     @Autowired
-    private PersonService ser;
+    private AmruthaPersonService ser;
     
     @PostMapping("/api/person")
-    public ResponseEntity<AmruthaPerson> post(@RequestBody Person person)
+    public ResponseEntity<AmruthaPerson> post(@RequestBody AmruthaPerson person)
     {
         if(ser.post(person))
         {
@@ -32,7 +32,7 @@ public class AmruthaPersonController {
     @GetMapping("/api/person")
     public ResponseEntity<List<AmruthaPerson>> getAll()
     {
-        List<Person> li = ser.getAll();
+        List<AmruthaPerson> li = ser.getAll();
         if(li.size()>0)
         {
             return new ResponseEntity<>(li,HttpStatus.OK);
@@ -45,7 +45,7 @@ public class AmruthaPersonController {
     @GetMapping("/api/person/byAge")
     public ResponseEntity<List<AmruthaPerson>> getbyAge(@RequestParam int age)
     {
-        List<Person> li = ser.getbyAge(age);
+        List<AmruthaPerson> li = ser.getbyAge(age);
         if(li.size()>0)
         {
             return new ResponseEntity<>(li,HttpStatus.OK);

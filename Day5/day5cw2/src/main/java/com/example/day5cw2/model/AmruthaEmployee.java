@@ -4,16 +4,16 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Employee {
+public class AmruthaEmployee {
     @Id
     private int employeeId;
     private String employeeName;
     private String employeeEmail;
     private double salary;
     private String department;
-    public Employee() {
+    public AmruthaEmployee() {
     }
-    public Employee(int employeeId, String employeeName, String employeeEmail, double salary, String department) {
+    public AmruthaEmployee(int employeeId, String employeeName, String employeeEmail, double salary, String department) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeeEmail = employeeEmail;

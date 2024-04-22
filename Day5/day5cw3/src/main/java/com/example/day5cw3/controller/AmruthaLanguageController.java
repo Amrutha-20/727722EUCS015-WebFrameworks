@@ -12,35 +12,35 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.day5cw3.model.Language;
-import com.example.day5cw3.service.LanguageService;
+import com.example.day5cw3.model.AmruthaLanguage;
+import com.example.day5cw3.service.AmruthaLanguageService;
 
 @RestController
-public class LanguageController {
-    public LanguageService languageService;
-    public LanguageController(LanguageService languageService)
+public class AmruthaLanguageController {
+    public AmruthaLanguageService languageService;
+    public AmruthaLanguageController(AmruthaLanguageService languageService)
     {
         this.languageService=languageService;
     }
     @PostMapping("/language")
-    public Language postMethodName(@RequestBody Language language) {
+    public AmruthaLanguage postMethodName(@RequestBody AmruthaLanguage language) {
         
         languageService.saveLanguage(language);
         return language;
     }
     @GetMapping("/language")
-    public List<Language> getMethodName() {
-        List<Language> list =  languageService.getLanguages();
+    public List<AmruthaLanguage> getMethodName() {
+        List<AmruthaLanguage> list =  languageService.getLanguages();
         return list;
     }
     @GetMapping("/language/{languageId}")
-    public Language getlangauge(@PathVariable("languageId") int id) {
-        Language l =  languageService.getLanguageById(id);
+    public AmruthaLanguage getlangauge(@PathVariable("languageId") int id) {
+        AmruthaLanguage l =  languageService.getLanguageById(id);
         return l;
     }
     
     @PutMapping("/language/{languageId}")
-    public Language putMethodName(@PathVariable int id, @RequestBody Language language) {
+    public AmruthaLanguage putMethodName(@PathVariable int id, @RequestBody AmruthaLanguage language) {
         languageService.updateLanguage(id,language);
         return language;
         

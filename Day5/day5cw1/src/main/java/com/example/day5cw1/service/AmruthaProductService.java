@@ -2,17 +2,17 @@ package com.example.day5cw1.service;
 
 import org.springframework.stereotype.Service;
 
-import com.example.day5cw1.model.Product;
-import com.example.day5cw1.repository.ProductRepo;
+import com.example.day5cw1.model.AmruthaProduct;
+import com.example.day5cw1.repository.AmruthaProductRepo;
 
 @Service
-public class ProductService {
-    public ProductRepo productRepo;
-    public ProductService(ProductRepo productRepo)
+public class AmruthaProductService {
+    public AmruthaProductRepo productRepo;
+    public AmruthaProductService(AmruthaProductRepo productRepo)
     {
         this.productRepo = productRepo;
     }
-    public boolean saveProduct(Product product)
+    public boolean saveProduct(AmruthaProduct product)
     {
         try
         {
@@ -24,7 +24,7 @@ public class ProductService {
         }
         return true;
     }
-    public boolean updateDetails(int id,Product product)
+    public boolean updateDetails(int id,AmruthaProduct product)
     {
         if(this.getProductById(id)==null)
         {
@@ -48,7 +48,7 @@ public class ProductService {
         productRepo.deleteById(id);
         return true;
     }
-    public Product getProductById(int id)
+    public AmruthaProduct getProductById(int id)
     {
         return productRepo.findById(id).orElse(null);
     }

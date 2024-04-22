@@ -4,17 +4,17 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.example.day5cw3.model.Language;
-import com.example.day5cw3.repository.LanguageRepo;
+import com.example.day5cw3.model.AmruthaLanguage;
+import com.example.day5cw3.repository.AmruthaLanguageRepo;
 
 @Service
-public class LanguageService {
-    private LanguageRepo languageRepo;
-    public LanguageService(LanguageRepo languageRepo)
+public class AmruthaLanguageService {
+    private AmruthaLanguageRepo languageRepo;
+    public AmruthaLanguageService(AmruthaLanguageRepo languageRepo)
     {
         this.languageRepo=languageRepo;
     }
-    public boolean saveLanguage(Language language)
+    public boolean saveLanguage(AmruthaLanguage language)
     {
         try
         {
@@ -27,11 +27,11 @@ public class LanguageService {
         }
         return true;
     }
-    public List<Language> getLanguages()
+    public List<AmruthaLanguage> getLanguages()
     {
         return languageRepo.findAll();
     }
-    public boolean updateLanguage(int id,Language language)
+    public boolean updateLanguage(int id,AmruthaLanguage language)
     {
         if(getLanguageById(id)==null)
         {
@@ -56,7 +56,7 @@ public class LanguageService {
         return true;
         
     }
-    public Language getLanguageById(int id)
+    public AmruthaLanguage getLanguageById(int id)
     {
         return languageRepo.findById(id).orElse(null);
     }

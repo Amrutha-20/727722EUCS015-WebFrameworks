@@ -2,17 +2,17 @@ package com.example.day5cw2.service;
 
 import org.springframework.stereotype.Service;
 
-import com.example.day5cw2.model.Employee;
-import com.example.day5cw2.repository.EmployeeRepo;
+import com.example.day5cw2.model.AmruthaEmployee;
+import com.example.day5cw2.repository.AmruthaEmployeeRepo;
 
 @Service
-public class EmployeeService {
-    public EmployeeRepo employeeRepo;
-    public EmployeeService(EmployeeRepo employeeRepo)
+public class AmruthaEmployeeService {
+    public AmruthaEmployeeRepo employeeRepo;
+    public AmruthaEmployeeService(AmruthaEmployeeRepo employeeRepo)
     {
         this.employeeRepo = employeeRepo;
     }
-    public boolean saveEmployee(Employee employee)
+    public boolean saveEmployee(AmruthaEmployee employee)
     {
         try
         {
@@ -24,7 +24,7 @@ public class EmployeeService {
         }
         return true;
     }
-    public boolean updateDetails(int id,Employee employee)
+    public boolean updateDetails(int id,AmruthaEmployee employee)
     {
         if(this.getEmployeeById(id)==null)
         {
@@ -48,7 +48,7 @@ public class EmployeeService {
         employeeRepo.deleteById(id);
         return true;
     }
-    public Employee getEmployeeById(int id)
+    public AmruthaEmployee getEmployeeById(int id)
     {
         return employeeRepo.findById(id).orElse(null);
     }

@@ -4,14 +4,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Product {
+public class AmruthaProduct {
     @Id
     private int productId;
     private String productName;
     private String productDescription;
-    public Product() {
+    public AmruthaProduct() {
     }
-    public Product(int productId, String productName, String productDescription) {
+    public AmruthaProduct(int productId, String productName, String productDescription) {
         this.productId = productId;
         this.productName = productName;
         this.productDescription = productDescription;

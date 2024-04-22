@@ -4,14 +4,14 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 
 @Entity
-public class Language {
+public class AmruthaLanguage {
     @Id
     private int languageId;
     private String languageName;
     private String languageComplexity;
-    public Language() {
+    public AmruthaLanguage() {
     }
-    public Language(int languageId, String languageName, String languageComplexity) {
+    public AmruthaLanguage(int languageId, String languageName, String languageComplexity) {
         this.languageId = languageId;
         this.languageName = languageName;
         this.languageComplexity = languageComplexity;
